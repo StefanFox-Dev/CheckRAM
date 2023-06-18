@@ -50,8 +50,8 @@ while (true) {
     $totalRam = $totalRam;
     $availableRam = $availableRam;
     
-    if ($availableRam > $availableRam_id) {
-        $message = date('d-m-Y H:i:s') . ' | 🟢 Осталось свободного места в ОЗУ: ' . $availableRam . 'ГБ, было: ' . $availableRam_id . 'ГБ из ' . $totalRam . ' ГБ' . PHP_EOL;
+    if ($availableRam !== $availableRam_id) {
+        $message = date('d-m-Y H:i:s') . ' | Осталось свободного места в ОЗУ: ' . $availableRam . 'ГБ, было: ' . $availableRam_id . 'ГБ из ' . $totalRam . ' ГБ' . PHP_EOL;
         
          $availableRam_id = $availableRam;
          echo $message;
