@@ -39,16 +39,13 @@ while (true) {
     
     $info = @file_get_contents('/proc/meminfo');
 
-    if (preg_match('/^MemTotal:\s+(\d+)\skB$/m', $info, $matches)) {
+     if (preg_match('/^MemTotal:\s+(\d+)\skB$/m', $info, $matches)) {
         $totalRam = round($matches[1] / 1024 / 1024, 2);
-    }
+     }
 
-    if (preg_match('/^MemAvailable:\s+(\d+)\skB$/m', $info, $matches)) {
+     if (preg_match('/^MemAvailable:\s+(\d+)\skB$/m', $info, $matches)) {
         $availableRam = round($matches[1] / 1024 / 1024, 2);
-    }
-
-    $totalRam = $totalRam;
-    $availableRam = $availableRam;
+     }
 
     if((int)$availableRam < 1){
         $message = date('d-m-Y H:i:s') . ' | 🔴 Не осталось свободного места в ОЗУ: ' . $availableRam . 'ГБ, было: ' . $availableRam_id . 'ГБ из ' . $totalRam . ' ГБ' . PHP_EOL;
