@@ -58,5 +58,5 @@ while (true) {
     }
 }
 
-sleep(2); #время проверки / time check
+sleep(1); #время проверки / time check
 ?>
