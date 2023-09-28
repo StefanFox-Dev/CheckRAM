@@ -2,6 +2,7 @@
 $availableRam_id = 0; $totalRam = 0; $availableRam = 0; $txt = "Скрипт проверки использования оперативной памяти запущен!
 Работает только на ОС: Linux и Android";
 
+
 #Отправка сообщений в Телеграм, ВК / Send message to Telegram, VK
 function send(string $message = ''): void {
     $token = 'bot1234:TEST-test'; #токен бота / token bot
@@ -28,6 +29,7 @@ function send(string $message = ''): void {
 }
 
 echo $txt;
+
 
 #ЗАПУСК / START
 while (true) {
